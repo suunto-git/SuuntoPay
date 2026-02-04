@@ -1,0 +1,6 @@
+framework module ManageMiiSDKFramework {
+  umbrella header "ManageMiiSDKFramework.h"
+  export *
+
+  module * { export * }
+}

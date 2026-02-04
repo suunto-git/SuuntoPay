@@ -1,0 +1,801 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios16.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ManageMiiSDKFramework
+import CommonCrypto
+import CoreNFC
+import CryptoKit
+import Foundation
+@_exported import ManageMiiSDKFramework
+import Security
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct PromoReadyData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class DasDeviceService {
+  public static let shared: ManageMiiSDKFramework.DasDeviceService
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class DiscoveryService {
+  public static let shared: ManageMiiSDKFramework.DiscoveryService
+  public func getEntityById(entityId: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Entity, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+public struct Variant : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Model : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DiscoveryServiceDevice : Swift.Codable {
+  public let brand: Swift.String
+  public let brandDisplayName: Swift.String
+  public let model: ManageMiiSDKFramework.Model
+  public let modelDisplayName: Swift.String
+  public let variants: [ManageMiiSDKFramework.Variant]?
+  public let defaultImage: Swift.String
+  public let type: Swift.String
+  public let typeCode: Swift.String?
+  public let rcosNotSupported: Swift.Bool
+  public let promoReadyNotSupported: Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Entity : Swift.Codable {
+  public let id: Swift.String
+  public let logo: Swift.String?
+  public let name: Swift.String
+  public let type: Swift.String?
+  public let theming: ManageMiiSDKFramework.Theming?
+  public let description: Swift.String?
+  public let coverImage: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum EntityType : Swift.String, Swift.Codable {
+  case oem
+  case issuer
+  case internal_
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Theming : Swift.Codable {
+  public let colors: ManageMiiSDKFramework.ThemeColors?
+  public let fonts: ManageMiiSDKFramework.Fonts?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ThemeColors : Swift.Codable {
+  public let primary: Swift.String?
+  public let onPrimary: Swift.String?
+  public let secondary: Swift.String?
+  public let onSecondary: Swift.String?
+  public let background: Swift.String?
+  public let surface: Swift.String?
+  public let error: Swift.String?
+  public let success: Swift.String?
+  public let onBackgroundHighEmphasis: Swift.String?
+  public let onBackgroundMediumEmphasis: Swift.String?
+  public let onBackgroundDisabled: Swift.String?
+  public let onSurfaceHighEmphasis: Swift.String?
+  public let onSurfaceMediumEmphasis: Swift.String?
+  public let onSurfaceDisabled: Swift.String?
+  public let navBar: Swift.String?
+  public let divider: Swift.String?
+  public let searchBar: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Fonts : Swift.Codable {
+  public let regular: ManageMiiSDKFramework.Font?
+  public let medium: ManageMiiSDKFramework.Font?
+  public let semiBold: ManageMiiSDKFramework.Font?
+  public let bold: ManageMiiSDKFramework.Font?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Font : Swift.Codable {
+  public let name: Swift.String
+  public let url: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct NfcDevice {
+}
+@objc @_inheritsConvenienceInitializers public class NFC_Manager : ObjectiveC.NSObject {
+  public func startSession(alertMessage: Swift.String, onTagDetected: @escaping (any CoreNFC.NFCISO7816Tag) -> Swift.Void, onError: @escaping (ManageMiiSDKFramework.ManageMiiSDKError) -> Swift.Void)
+  public func stopSession(withSuccessMessage successMessage: Swift.String? = nil, errorMessage: Swift.String? = nil)
+  public func updateAlertMessage(_ message: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ManageMiiSDKFramework.NFC_Manager : CoreNFC.NFCTagReaderSessionDelegate {
+  public func tagReaderSessionDidBecomeActive(_ session: CoreNFC.NFCTagReaderSession)
+  public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didDetect tags: [CoreNFC.NFCTag])
+  public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didInvalidateWithError error: any Swift.Error)
+}
+public class NFCReader : ManageMiiSDKFramework.NFCInterface {
+  public init(tag: any CoreNFC.NFCISO7816Tag)
+  public func exchange(_ command: Swift.String) async throws -> Swift.String
+  public func sendCommand(_ command: Foundation.Data) async -> Foundation.Data?
+  public func selectAID(_ aid: Swift.String) async -> Swift.Bool
+  @objc deinit
+}
+public protocol NFCInterface {
+  func exchange(_ command: Swift.String) async throws -> Swift.String
+  func sendCommand(_ command: Foundation.Data) async -> Foundation.Data?
+  func selectAID(_ aid: Swift.String) async -> Swift.Bool
+}
+public class NFCService {
+  public init()
+  public func getSerialNumber(nfcInterface: any ManageMiiSDKFramework.NFCInterface) async -> Swift.String
+  public func getDevice(nfcInterface: any ManageMiiSDKFramework.NFCInterface, initialIOSSelectedAID: Swift.String) async -> ManageMiiSDKFramework.NfcDevice?
+  @objc deinit
+}
+public enum CardDetailsSource : Swift.String, Swift.Codable {
+  case cardAddedManually
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PSD2Mode : Swift.String, Swift.Codable {
+  case transaction
+  case amount
+  case unhandled
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ActivationMethodType : Swift.String, Swift.Codable {
+  case sms
+  case callMannedNumber
+  case callAutomatedNumber
+  case email
+  case website
+  case mobileApp
+  case issuerCallback
+  case EMV_3DS
+  case unknown
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CardDetails : Swift.Codable {
+  public var accountNumber: Swift.String
+  public var expiryYear: Swift.String
+  public var expiryMonth: Swift.String
+  public var securityCode: Swift.String?
+  public var source: ManageMiiSDKFramework.CardDetailsSource?
+  public var billingAddress: ManageMiiSDKFramework.BillingAddress?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EncryptedCard : Swift.Codable {
+  public var oaepHashingAlgorithm: Swift.String
+  public var cardInfo: Swift.String
+  public var encryptedKey: Swift.String
+  public var publicKeyFingerprint: Swift.String
+  public var language: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EnrollRequest : Swift.Codable {
+  public var oaepHashingAlgorithm: Swift.String?
+  public var cardInfo: Swift.String
+  public var encryptedKey: Swift.String
+  public var publicKeyFingerprint: Swift.String
+  public var language: Swift.String
+  public var asn: Swift.String?
+  public var device: ManageMiiSDKFramework.Device?
+  public var tacAcceptedTimestamp: Swift.String?
+  public var tacAssetId: Swift.String?
+  public var eligibilityReceipt: Swift.String?
+  public var userEmail: Swift.String?
+  public var os: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CheckCardNumberResponse : Swift.Codable {
+  public let responseCode: Swift.String
+  public let config: ManageMiiSDKFramework.ServiceConfig
+  public let configId: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CheckFullCardResponse : Swift.Codable {
+  public let asn: Swift.String
+  public let tacAssetId: Swift.String
+  public let tacAssetUrl: Swift.String
+  public let eligibilityReceipt: Swift.String
+  public let eligibilityValidityMins: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BillingAddress : Swift.Codable {
+  public var line1: Swift.String
+  public var line2: Swift.String
+  public var postalCode: Swift.String
+  public var country: Swift.String
+  public var city: Swift.String
+  public var countrySubdivision: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RegisterCardResponse : Swift.Codable {
+  public let asn: Swift.String
+  public let tacAssetId: Swift.String
+  public let tacAssetUrl: Swift.String
+  public let eligibilityReceipt: Swift.String
+  public let eligibilityValidityMins: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Wallet : Swift.Codable {
+  public let name: Swift.String?
+  public let logoUrl: Swift.String?
+  public let web: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ServiceConfig : Swift.Codable {
+  public let cardholderNameRequired: Swift.Bool?
+  public let addressRequired: Swift.Bool
+  public let cvcRequired: Swift.Bool
+  public let emailSender: Swift.String
+  public let psd2Mode: ManageMiiSDKFramework.PSD2Mode
+  public let issuerName: Swift.String
+  public let currency: Swift.String
+  public let psd2Limit: Swift.Int
+  public let transactionHistoryEnabled: Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PSD2 : Swift.Codable {
+  public let currentAmount: Swift.Int?
+  public let currentTransactions: Swift.Int?
+  public let paymentReminderPushNotificationSent: Swift.Int?
+  public let paymentReminderValue: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ActivationMethod : Swift.Codable {
+  public let id: Swift.String?
+  public let method: ManageMiiSDKFramework.ActivationMethodType?
+  public let details: Swift.String?
+  public let initialRequestedTime: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CardDetail : Swift.Codable {
+  public init(accountNumber: Swift.String, expiryMonth: Swift.String, expiryYear: Swift.String, source: Swift.String?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EncryptionData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum EncryptionError : Swift.Error {
+  case invalidJson
+  case invalidKey
+  case unsupportedAlgorithm
+  case encryptionError
+  public static func == (a: ManageMiiSDKFramework.EncryptionError, b: ManageMiiSDKFramework.EncryptionError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class PaymentCardService {
+  public static let shared: ManageMiiSDKFramework.PaymentCardService
+  public func checkCardNumber(checkCardNumber: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.CheckCardNumberResponse, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func checkFullCardEligibility(cardDetail: ManageMiiSDKFramework.CardDetail, completion: @escaping (Swift.Result<ManageMiiSDKFramework.CheckFullCardResponse, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func registerCard(email: Swift.String? = "", completion: @escaping (Swift.Result<ManageMiiSDKFramework.Service, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func requestActivationCode(asn: Swift.String, token: Swift.String, activationMethodId: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Service, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func activateServiceByCode(asn: Swift.String, token: Swift.String, activationCode: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func getServiceConfiguration(configId: Swift.String? = nil, completion: @escaping (Swift.Result<ManageMiiSDKFramework.ServiceConfig, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func removeService(asn: Swift.String? = nil, token: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func unsuspendService(asn: Swift.String? = nil, token: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Service, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func suspendService(asn: Swift.String? = nil, token: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Service, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func updatePaymentReminderValue(value: Swift.Int, asn: Swift.String? = nil, token: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Service, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func reauthenticateForPSD2(asn: Swift.String? = nil, token: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Service, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func prepareRegistration(device: ManageMiiSDKFramework.Device? = nil, asn: Swift.String? = nil)
+  @objc deinit
+}
+public struct APDU : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DataObject {
+}
+public enum DataType : Swift.String, Swift.Codable {
+  case APDU
+  case BOOLEAN
+  case NUMBER
+  case STRING
+  case MAP
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PackageResponse : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum PackageType : Swift.String, Swift.Codable {
+  case CLEAN
+  case PERSO
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PackageResponseRequest {
+}
+public struct Status {
+}
+public struct FailureStatus {
+}
+public enum NfcState : Swift.String {
+  case searching
+  case updating
+  case success
+  case deviceMismatch
+  case deviceReadFailed
+  case waitingOnPackages
+  case fetchPackageTimedOut
+  case connectionLost
+  case personalisationFailed
+  case responseNotAllowed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol UIInterface {
+  func onProcessStarted()
+  func onProgressUpdate(percentage: Swift.Double, packageType: Swift.String)
+  func onError(state: ManageMiiSDKFramework.NfcState)
+  func onSuccess()
+}
+@_hasMissingDesignatedInitializers public class PersonalisationService {
+  public static let shared: ManageMiiSDKFramework.PersonalisationService
+  public func setupInterfaces(nfcInterface: any ManageMiiSDKFramework.NFCInterface, uiInterface: any ManageMiiSDKFramework.UIInterface)
+  public func preparePersonalisationData(asn: Swift.String, token: Swift.String, serialNumber: Swift.String? = nil, sequenceCounter: Swift.String? = nil, aid: Swift.String? = nil, typeCode: Swift.String? = nil, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+  public func prepareInitialPackage(asn: Swift.String, token: Swift.String, serialNumber: Swift.String? = nil, sequenceCounter: Swift.String? = nil, aid: Swift.String? = nil, typeCode: Swift.String? = nil, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+  public func beginInstallation(initialIOSSelectedAID: Swift.String? = nil, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+  public func retry(initialIOSSelectedAID: Swift.String, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+  @objc deinit
+}
+public struct WearableDevice {
+}
+public struct AuthorizeApiResponse : Swift.Codable {
+  public let code: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AccessToken : Swift.Codable {
+  public let access_token: Swift.String
+  public let expires_in: Swift.Int
+  public let jti: Swift.String
+  public let refresh_token: Swift.String?
+  public let scope: [Swift.String]
+  public let token_type: Swift.String
+  public let token_verifier: Swift.String?
+  public let token_verifier_exp: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct User : Swift.Codable {
+  public let email: Swift.String
+  public let token: ManageMiiSDKFramework.AccessToken
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PushNotificationToken : Swift.Codable {
+  public let token: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Credentials : Swift.Codable {
+  public let email: Swift.String
+  public let password: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ChangePasswordRequest : Swift.Codable {
+  public let email: Swift.String
+  public let currentPassword: Swift.String
+  public let newPassword: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SignUpOptions : Swift.Codable {
+  public let iosAppUrl: Swift.String?
+  public let androidAppUrl: Swift.String?
+  public let issuer: Swift.String?
+  public let issuerImage: Swift.String?
+  public let oem: Swift.String?
+  public let oemImage: Swift.String?
+  public let mobileApp: Swift.String?
+  public let sendConfirmationEmail: Swift.Bool?
+  public let emailSender: Swift.String?
+  public let issuerName: Swift.String?
+  public let brand: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class UserService {
+  public static let shared: ManageMiiSDKFramework.UserService
+  public func signUp(credentials: ManageMiiSDKFramework.Credentials, options: ManageMiiSDKFramework.SignUpOptions? = nil, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func signIn(credentials: ManageMiiSDKFramework.Credentials, completion: @escaping (Swift.Result<ManageMiiSDKFramework.User, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func logout(completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func sendPushToken(token: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func deleteUserAccount(email: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func sendResetPasswordEmail(email: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func changePassword(changePasswordRequest: ManageMiiSDKFramework.ChangePasswordRequest, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func sendMagicLinkEmail(email: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func sendLinkThirdPartyAccountEmail(email: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func saveUserToken(email: Swift.String, token: ManageMiiSDKFramework.AccessToken, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func getLoggedInUser() -> ManageMiiSDKFramework.User?
+  public func isUserLoggedIn() -> Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class WearablesManagerService {
+  public static let shared: ManageMiiSDKFramework.WearablesManagerService
+  public func getWearable(serialNumber: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Wearable, any Swift.Error>) -> Swift.Void)
+  public func authenticateWearableUsingCryptogram(serialNumber: Swift.String, cryptogram: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.User, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+public enum TaskType : Swift.String, Swift.Codable {
+  case clean
+  case perso
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RegistrationMethod : Swift.String, Swift.Codable {
+  case mobile
+  case web
+  case wearable
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ServiceState : Swift.String, Swift.Codable {
+  case inactive
+  case active
+  case suspended
+  case processing
+  case deactivated
+  case deleted
+  case failed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SupportedServiceType : Swift.String, Swift.Codable {
+  case tokenisation
+  case prepaid
+  case das
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct IdentifiedWearable : Swift.Codable {
+  public var wearableName: Swift.String?
+  public var email: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WearableLostMode : Swift.Codable {
+  public var message: Swift.String?
+  public var email: Swift.String?
+  public var phoneNumber: Swift.String?
+  public var photo: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Wearable : Swift.Codable {
+  public var asn: Swift.String
+  public var createdDate: Swift.String?
+  public var device: ManageMiiSDKFramework.Device?
+  public var services: [ManageMiiSDKFramework.Service]?
+  public var serialNumber: Swift.String?
+  public var username: Swift.String?
+  public var oemConfig: ManageMiiSDKFramework.OEMConfig?
+  public var aid: Swift.String?
+  public var lost: Swift.Bool?
+  public var lostModeDetails: ManageMiiSDKFramework.WearableLostMode?
+  public var sequenceCounter: Swift.String?
+  public var actions: Swift.String?
+  public var wearablePermissions: ManageMiiSDKFramework.WearablePermissions?
+  public var userSpecifiedWearableName: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Service : Swift.Codable {
+  public var type: Swift.String?
+  public var subType: Swift.String?
+  public var token: Swift.String?
+  public var tokenExpiry: Swift.String?
+  public var taskType: ManageMiiSDKFramework.TaskType?
+  public var provider: Swift.String?
+  public var productInfo: ManageMiiSDKFramework.ProductInfo?
+  public var activationMethods: [ManageMiiSDKFramework.ActivationMethod]?
+  public var state: ManageMiiSDKFramework.ServiceState?
+  public var registrationMethod: ManageMiiSDKFramework.RegistrationMethod?
+  public var configId: Swift.String?
+  public var config: ManageMiiSDKFramework.ServiceConfig?
+  public var psd2: ManageMiiSDKFramework.PSD2?
+  public var activationExpired: Swift.Bool?
+  public var remainingActivationAttempts: Swift.Int?
+  public var createdDate: Swift.String?
+  public var modifiedDate: Swift.String?
+  public var servicePermissions: ManageMiiSDKFramework.ServicePermissions?
+  public var promoReadyData: ManageMiiSDKFramework.PromoReadyData?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ProductInfo : Swift.Codable {
+  public var useAlternativeIssuerLogo: Swift.Bool?
+  public var customerServiceUrl: Swift.String?
+  public var image: Swift.String?
+  public var longDescription: Swift.String?
+  public var fallbackImage: ManageMiiSDKFramework.FallbackImage?
+  public var imageText: Swift.String?
+  public var tokenSuffix: Swift.String?
+  public var mobileApp: ManageMiiSDKFramework.MobileApp?
+  public var termsAndConditionsUrl: Foundation.URL?
+  public var privacyPolicyUrl: Foundation.URL?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FallbackImage : Swift.Codable {
+  public var icon: Swift.String?
+  public var foregroundColor: Swift.String?
+  public var issuerLogo: Foundation.URL?
+  public var issuerName: Swift.String?
+  public var shortDescription: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MobileApp : Swift.Codable {
+  public var openMobileAppIOSDeepLinkingUrl: ManageMiiSDKFramework.IOSDeepLinkingUrl?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MobileAppActivationMethod {
+  public var activateWithIssuerMobileAppIOSDeepLinkingUrl: ManageMiiSDKFramework.IOSDeepLinkingUrl?
+}
+public struct AndroidIntent : Swift.Codable {
+  public var action: Swift.String?
+  public var packageName: Swift.String?
+  public var extraTextValue: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct IOSDeepLinkingUrl : Swift.Codable {
+  public var deepLinkingUrl: Foundation.URL?
+  public var extraTextValue: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ServicePermissions : Swift.Codable {
+  public var canDelete: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WearablePermissions : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Device : Swift.Codable {
+  public var brand: Swift.String?
+  public var brandDisplayName: Swift.String?
+  public var model: Swift.String?
+  public var modelDisplayName: Swift.String?
+  public var version: Swift.String?
+  public var variant: ManageMiiSDKFramework.Variant?
+  public var defaultImage: Foundation.URL?
+  public var entityId: Swift.String?
+  public var type: Swift.String?
+  public var typeCode: Swift.String?
+  public var rcosNotSupported: Swift.Bool?
+  public var promoReadyNotSupported: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OEMConfig : Swift.Codable {
+  public var customerServiceEmail: Swift.String?
+  public var customerServicePhoneNumber: Swift.String?
+  public var customerServiceUrl: Foundation.URL?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SupportedService : Swift.Codable {
+  public var type: Swift.String?
+  public var serviceId: Swift.String?
+  public var provider: Swift.String?
+  public var description: Swift.String?
+  public var icon: Swift.String?
+  public var country: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class WearablesService {
+  public static let shared: ManageMiiSDKFramework.WearablesService
+  public func getAllWearables(completion: @escaping (Swift.Result<[ManageMiiSDKFramework.Wearable], ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func getWearable(asn: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Wearable, any Swift.Error>) -> Swift.Void)
+  public func identifyWearable(serialNumber: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.IdentifiedWearable, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func getWearableLostMode(serialNumber: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.WearableLostMode, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func updateLostModeDetail<T>(serialNumber: Swift.String, detail: T, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Wearable, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void) where T : Swift.Encodable
+  public func enableLostMode(asn: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func disableLostMode(asn: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func removeWearable(asn: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func patchWearable(asn: Swift.String, userSpecifiedWearableName: Swift.String?, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Wearable, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func getModelsBySerialNumber(serialNumber: Swift.String, completion: @escaping (Swift.Result<[ManageMiiSDKFramework.DiscoveryServiceDevice], ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func addWearableToAccount(serialNumber: Swift.String, brand: Swift.String, model: Swift.String, version: Swift.String, variant: Swift.String?, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Wearable, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func getService(asn: Swift.String, token: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Service, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func getSupportedServices(asn: Swift.String, completion: @escaping (Swift.Result<[ManageMiiSDKFramework.SupportedService], ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ManageMiiSDK {
+  public static let instance: ManageMiiSDKFramework.ManageMiiSDK
+  public static func setEnvironment(environment: ManageMiiSDKFramework.Environment, completion: @escaping (Swift.Result<ManageMiiSDKFramework.ManageMiiSDK, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public static func setup(clientId: Swift.String, entityId: Swift.String, environment: ManageMiiSDKFramework.Environment = .development, apiDelay: Swift.Int? = nil, deviceInfo: ManageMiiSDKFramework.DeviceInfo? = nil, completion: @escaping (Swift.Result<ManageMiiSDKFramework.ManageMiiSDK, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  @objc deinit
+}
+public enum Environment : Swift.String {
+  case production
+  case development
+  case demo
+  case staging
+  case local
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ApplicationType : Swift.String {
+  case ios
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct DeviceInfo : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ErrorCode : Swift.String {
+  case internal_service_failure
+  case account_doesnt_exist
+  case account_already_exists
+  case invalid_credentials
+  case invalid_current_password
+  case invalid_card_details
+  case invalid_public_key
+  case card_not_eligible
+  case card_not_eligible_with_info
+  case add_payment_declined
+  case invalid_device_configuration
+  case invalid_token
+  case invalid_eligibility_receipt
+  case wearable_not_found
+  case wearable_already_in_account
+  case wearable_in_another_account
+  case business_card_already_added
+  case incorrect_code
+  case incorrect_code_retries_exceeded
+  case expired_code
+  case expired_session
+  case badRequest
+  case notFound
+  case unhandledApiError
+  case sdk_method_error
+  case noNetwork
+  case SDK_ERROR
+  case not_found
+  case unknownError
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ErrorType : Swift.String {
+  case apiError
+  case NETWORK_ERROR
+  case SDK_ERROR
+  case invalid_request
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ManageMiiSDKError : Swift.Error {
+  public let type: ManageMiiSDKFramework.ErrorType
+  public let code: ManageMiiSDKFramework.ErrorCode
+  public let status: Swift.Int
+  public let message: Swift.String
+}
+extension ManageMiiSDKFramework.EntityType : Swift.Equatable {}
+extension ManageMiiSDKFramework.EntityType : Swift.Hashable {}
+extension ManageMiiSDKFramework.EntityType : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.CardDetailsSource : Swift.Equatable {}
+extension ManageMiiSDKFramework.CardDetailsSource : Swift.Hashable {}
+extension ManageMiiSDKFramework.CardDetailsSource : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.PSD2Mode : Swift.Equatable {}
+extension ManageMiiSDKFramework.PSD2Mode : Swift.Hashable {}
+extension ManageMiiSDKFramework.PSD2Mode : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.ActivationMethodType : Swift.Equatable {}
+extension ManageMiiSDKFramework.ActivationMethodType : Swift.Hashable {}
+extension ManageMiiSDKFramework.ActivationMethodType : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.EncryptionError : Swift.Equatable {}
+extension ManageMiiSDKFramework.EncryptionError : Swift.Hashable {}
+extension ManageMiiSDKFramework.DataType : Swift.Equatable {}
+extension ManageMiiSDKFramework.DataType : Swift.Hashable {}
+extension ManageMiiSDKFramework.DataType : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.PackageType : Swift.Equatable {}
+extension ManageMiiSDKFramework.PackageType : Swift.Hashable {}
+extension ManageMiiSDKFramework.PackageType : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.NfcState : Swift.Equatable {}
+extension ManageMiiSDKFramework.NfcState : Swift.Hashable {}
+extension ManageMiiSDKFramework.NfcState : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.TaskType : Swift.Equatable {}
+extension ManageMiiSDKFramework.TaskType : Swift.Hashable {}
+extension ManageMiiSDKFramework.TaskType : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.RegistrationMethod : Swift.Equatable {}
+extension ManageMiiSDKFramework.RegistrationMethod : Swift.Hashable {}
+extension ManageMiiSDKFramework.RegistrationMethod : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.ServiceState : Swift.Equatable {}
+extension ManageMiiSDKFramework.ServiceState : Swift.Hashable {}
+extension ManageMiiSDKFramework.ServiceState : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.SupportedServiceType : Swift.Equatable {}
+extension ManageMiiSDKFramework.SupportedServiceType : Swift.Hashable {}
+extension ManageMiiSDKFramework.SupportedServiceType : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.Environment : Swift.Equatable {}
+extension ManageMiiSDKFramework.Environment : Swift.Hashable {}
+extension ManageMiiSDKFramework.Environment : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.ApplicationType : Swift.Equatable {}
+extension ManageMiiSDKFramework.ApplicationType : Swift.Hashable {}
+extension ManageMiiSDKFramework.ApplicationType : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.ErrorCode : Swift.Equatable {}
+extension ManageMiiSDKFramework.ErrorCode : Swift.Hashable {}
+extension ManageMiiSDKFramework.ErrorCode : Swift.RawRepresentable {}
+extension ManageMiiSDKFramework.ErrorType : Swift.Equatable {}
+extension ManageMiiSDKFramework.ErrorType : Swift.Hashable {}
+extension ManageMiiSDKFramework.ErrorType : Swift.RawRepresentable {}
