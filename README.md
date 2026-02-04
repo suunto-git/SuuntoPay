@@ -1,7 +1,5 @@
-AlipaySDK Wrapper
+Suunto Pay Wrapper
 
-Current AlipaySDK version: 15.8.37.1
-
-Link to the updated version:
-AlipaySDK: https://opendocs.alipay.com/common/02km9l 
+Digiseq SDK docs:
+http://docs.manage-mii.com.s3-website.eu-west-2.amazonaws.com/ios/
 
