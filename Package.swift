@@ -9,17 +9,19 @@ let package = Package(
         .iOS(.v16)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SuuntoPay",
             targets: ["SuuntoPay"]
-        ),
+        )
     ],
     targets: [
-        .binaryTarget(
+        .target(
             name: "SuuntoPay",
+            dependencies: ["ManageMiiSDKFramework"]
+        ),
+        .binaryTarget(
+            name: "ManageMiiSDKFramework",
             path: "./Sources/ManageMiiSDKFramework.xcframework"
         )
-        
     ]
 )
