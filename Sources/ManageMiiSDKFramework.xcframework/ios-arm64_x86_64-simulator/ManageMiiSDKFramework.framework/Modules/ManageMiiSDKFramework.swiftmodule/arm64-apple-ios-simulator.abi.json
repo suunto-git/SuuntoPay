@@ -4435,6 +4435,51 @@
         "children": [
           {
             "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ManageMiiSDKFramework7VariantV2idSSvp",
+            "mangledName": "$s21ManageMiiSDKFramework7VariantV2idSSvp",
+            "moduleName": "ManageMiiSDKFramework",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework7VariantV2idSSvg",
+                "mangledName": "$s21ManageMiiSDKFramework7VariantV2idSSvg",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "color",
             "printedName": "color",
             "children": [
@@ -4558,13 +4603,19 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(color:image:)",
+            "printedName": "init(id:color:image:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Variant",
                 "printedName": "ManageMiiSDKFramework.Variant",
                 "usr": "s:21ManageMiiSDKFramework7VariantV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -4596,8 +4647,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21ManageMiiSDKFramework7VariantV5color5imageACSSSg_AFtcfc",
-            "mangledName": "$s21ManageMiiSDKFramework7VariantV5color5imageACSSSg_AFtcfc",
+            "usr": "s:21ManageMiiSDKFramework7VariantV2id5color5imageACSS_SSSgAGtcfc",
+            "mangledName": "$s21ManageMiiSDKFramework7VariantV2id5color5imageACSS_SSSgAGtcfc",
             "moduleName": "ManageMiiSDKFramework",
             "declAttributes": [
               "AccessControl"
@@ -4917,6 +4968,51 @@
         "name": "DiscoveryServiceDevice",
         "printedName": "DiscoveryServiceDevice",
         "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ManageMiiSDKFramework22DiscoveryServiceDeviceV2idSSvp",
+            "mangledName": "$s21ManageMiiSDKFramework22DiscoveryServiceDeviceV2idSSvp",
+            "moduleName": "ManageMiiSDKFramework",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework22DiscoveryServiceDeviceV2idSSvg",
+                "mangledName": "$s21ManageMiiSDKFramework22DiscoveryServiceDeviceV2idSSvg",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "brand",
@@ -40470,21 +40566,21 @@
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/discovery\/DiscoveryServiceModels.swift",
       "kind": "StringLiteral",
-      "offset": 1770,
+      "offset": 1918,
       "length": 5,
       "value": "\"OEM\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/discovery\/DiscoveryServiceModels.swift",
       "kind": "StringLiteral",
-      "offset": 1794,
+      "offset": 1942,
       "length": 8,
       "value": "\"ISSUER\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/discovery\/DiscoveryServiceModels.swift",
       "kind": "StringLiteral",
-      "offset": 1824,
+      "offset": 1972,
       "length": 10,
       "value": "\"INTERNAL\""
     },

@@ -91,9 +91,10 @@ public func handleBusinessCardError(data: Foundation.Data?, response: Foundation
   @objc deinit
 }
 public struct Variant : Swift.Codable {
+  public let id: Swift.String
   public let color: Swift.String?
   public let image: Swift.String?
-  public init(color: Swift.String?, image: Swift.String?)
+  public init(id: Swift.String, color: Swift.String?, image: Swift.String?)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -104,6 +105,7 @@ public struct Model : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct DiscoveryServiceDevice : Swift.Codable {
+  public let id: Swift.String
   public let brand: Swift.String
   public let brandDisplayName: Swift.String
   public let model: ManageMiiSDKFramework.Model
