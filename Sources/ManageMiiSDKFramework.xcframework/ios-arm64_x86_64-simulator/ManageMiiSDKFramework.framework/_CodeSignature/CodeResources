@@ -6,11 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		4i/9K02mftNGS/6hAaayFLEa7pQ=
+		7MRvSDnpJaqUQb0hfXLw1w0kaXg=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		BoMs9funaHYXvu9j1rRnTPRq7Y0=
+		wLcF7kvaQe8CNX5ADSACtnw6dKs=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ukXtPcbZh8WkzqRliuc9KkPJVmM=
+		Ey2wBtqyuJAw4RJ2y0zukFRPDso=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		BoMs9funaHYXvu9j1rRnTPRq7Y0=
+		wLcF7kvaQe8CNX5ADSACtnw6dKs=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7gjIt20IWGR/ndQnMSpVPDey+qE=
+		fyoDFkrtrdvM6+/813ANZH9s22c=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -55,7 +55,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7/NfKQ7bcq+vquH2gaG7dvWZrZaRrw6vTsD867Kj2zE=
+			lsh0oGYnQ1UnHmkZMZRVnjHuESBqe4cew1JIPz/TvU4=
 			</data>
 		</dict>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -83,14 +83,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oFmNgFnDx8t553a++bVlhyYAsE3ii44cmj13LPsBsWw=
+			hempWVqzinGd/MS9FB5W+b0RW13roLVixOAkz3ulZZk=
 			</data>
 		</dict>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7/NfKQ7bcq+vquH2gaG7dvWZrZaRrw6vTsD867Kj2zE=
+			lsh0oGYnQ1UnHmkZMZRVnjHuESBqe4cew1JIPz/TvU4=
 			</data>
 		</dict>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -118,7 +118,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yQGTd9vOzRodE1YERwxT5Aw5Q+l8xXPIL6pl0wdvIeE=
+			dOhsDuksSHGNJh/ZLB2JEZgaLZ40tPZaYs3/p1bY7JY=
 			</data>
 		</dict>
 	</dict>

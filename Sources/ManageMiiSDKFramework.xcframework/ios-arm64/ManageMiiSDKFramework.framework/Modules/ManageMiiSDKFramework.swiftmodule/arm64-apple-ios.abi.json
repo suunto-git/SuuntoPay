@@ -40734,14 +40734,21 @@
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/nfc\/GlobalPlatform.swift",
       "kind": "StringLiteral",
-      "offset": 789,
+      "offset": 710,
+      "length": 12,
+      "value": "\"475001D700\""
+    },
+    {
+      "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/nfc\/GlobalPlatform.swift",
+      "kind": "StringLiteral",
+      "offset": 814,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/nfc\/GlobalPlatform.swift",
       "kind": "IntegerLiteral",
-      "offset": 4271,
+      "offset": 4354,
       "length": 2,
       "value": "-1"
     },
