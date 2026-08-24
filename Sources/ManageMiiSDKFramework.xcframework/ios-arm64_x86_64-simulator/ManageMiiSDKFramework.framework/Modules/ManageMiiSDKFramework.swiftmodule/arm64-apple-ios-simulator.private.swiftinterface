@@ -412,6 +412,13 @@ public enum DataType : Swift.String, Swift.Codable {
   }
 }
 public struct PackageResponse : Swift.Codable {
+  public var responseCode: Swift.String?
+  public var apdus: [ManageMiiSDKFramework.APDU]?
+  public var packageId: Swift.String?
+  public var packageType: ManageMiiSDKFramework.PackageType?
+  public var securityDomains: [Swift.String : Swift.String]?
+  public var remaining: Swift.Int?
+  public init(responseCode: Swift.String? = nil, apdus: [ManageMiiSDKFramework.APDU]? = nil, packageId: Swift.String? = nil, packageType: ManageMiiSDKFramework.PackageType? = nil, securityDomains: [Swift.String : Swift.String]? = nil, remaining: Swift.Int? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

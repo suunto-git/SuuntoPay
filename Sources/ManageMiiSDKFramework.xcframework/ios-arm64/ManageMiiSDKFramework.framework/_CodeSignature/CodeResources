@@ -6,15 +6,15 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		7W8VZn2uoCGU0Gl8UlhJd3uR5bs=
+		pz9W70LIejBdvYoSkXfTVxT0R0U=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		wLcF7kvaQe8CNX5ADSACtnw6dKs=
+		16Le12ejs4yYCSm/yw+JIB8IRYA=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		bOMQs8OtllDV3H4uUbbbaGL24oo=
+		66NnNRJY7VI+6UrrONsLzLHxP9A=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		bOMQs8OtllDV3H4uUbbbaGL24oo=
+		66NnNRJY7VI+6UrrONsLzLHxP9A=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		8tIIfu2qbCjRBSN3WGyt+bxkXwE=
+		ISMe/nh6pC/iunnLQfgszcHQXu4=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -35,14 +35,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lsh0oGYnQ1UnHmkZMZRVnjHuESBqe4cew1JIPz/TvU4=
+			jaYDEqKMnF4tLrZH3UzfNjrIvTVFgWIuNuiRMTMwiw0=
 			</data>
 		</dict>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Cv+BzOV2Pk2ApJD20qzqy/g15/rLmdvfVB9/cR9EiE=
+			tbWfSKfXB73HErrW+5QG1gubp1IUXgFQfw8Gw2/6eMY=
 			</data>
 		</dict>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -56,14 +56,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Cv+BzOV2Pk2ApJD20qzqy/g15/rLmdvfVB9/cR9EiE=
+			tbWfSKfXB73HErrW+5QG1gubp1IUXgFQfw8Gw2/6eMY=
 			</data>
 		</dict>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XREC4laOS1zMJz3FN5VmVBr6iV9KiSjTy0gzFPKGMrs=
+			iUUDNcYE5HZv+bGstvvKn61QjLGUt73nt9vqh5GCvtU=
 			</data>
 		</dict>
 	</dict>
