@@ -17976,6 +17976,652 @@
         "printedName": "APDU",
         "children": [
           {
+            "kind": "Var",
+            "name": "apdu",
+            "printedName": "apdu",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ManageMiiSDKFramework4APDUV4apduSSSgvp",
+            "mangledName": "$s21ManageMiiSDKFramework4APDUV4apduSSSgvp",
+            "moduleName": "ManageMiiSDKFramework",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV4apduSSSgvg",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV4apduSSSgvg",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV4apduSSSgvs",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV4apduSSSgvs",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV4apduSSSgvM",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV4apduSSSgvM",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allowedResponse",
+            "printedName": "allowedResponse",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ManageMiiSDKFramework4APDUV15allowedResponseSSSgvp",
+            "mangledName": "$s21ManageMiiSDKFramework4APDUV15allowedResponseSSSgvp",
+            "moduleName": "ManageMiiSDKFramework",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV15allowedResponseSSSgvg",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV15allowedResponseSSSgvg",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV15allowedResponseSSSgvs",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV15allowedResponseSSSgvs",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV15allowedResponseSSSgvM",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV15allowedResponseSSSgvM",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "responseId",
+            "printedName": "responseId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ManageMiiSDKFramework4APDUV10responseIdSSSgvp",
+            "mangledName": "$s21ManageMiiSDKFramework4APDUV10responseIdSSSgvp",
+            "moduleName": "ManageMiiSDKFramework",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV10responseIdSSSgvg",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV10responseIdSSSgvg",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV10responseIdSSSgvs",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV10responseIdSSSgvs",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV10responseIdSSSgvM",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV10responseIdSSSgvM",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "label",
+            "printedName": "label",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ManageMiiSDKFramework4APDUV5labelSSSgvp",
+            "mangledName": "$s21ManageMiiSDKFramework4APDUV5labelSSSgvp",
+            "moduleName": "ManageMiiSDKFramework",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV5labelSSSgvg",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV5labelSSSgvg",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV5labelSSSgvs",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV5labelSSSgvs",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV5labelSSSgvM",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV5labelSSSgvM",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "subLabel",
+            "printedName": "subLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21ManageMiiSDKFramework4APDUV8subLabelSSSgvp",
+            "mangledName": "$s21ManageMiiSDKFramework4APDUV8subLabelSSSgvp",
+            "moduleName": "ManageMiiSDKFramework",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV8subLabelSSSgvg",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV8subLabelSSSgvg",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV8subLabelSSSgvs",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV8subLabelSSSgvs",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21ManageMiiSDKFramework4APDUV8subLabelSSSgvM",
+                "mangledName": "$s21ManageMiiSDKFramework4APDUV8subLabelSSSgvM",
+                "moduleName": "ManageMiiSDKFramework",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(apdu:allowedResponse:responseId:label:subLabel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "APDU",
+                "printedName": "ManageMiiSDKFramework.APDU",
+                "usr": "s:21ManageMiiSDKFramework4APDUV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21ManageMiiSDKFramework4APDUV4apdu15allowedResponse10responseId5label8subLabelACSSSg_A4Itcfc",
+            "mangledName": "$s21ManageMiiSDKFramework4APDUV4apdu15allowedResponse10responseId5label8subLabelACSSSg_A4Itcfc",
+            "moduleName": "ManageMiiSDKFramework",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -41761,70 +42407,70 @@
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4081,
+      "offset": 4481,
       "length": 11,
       "value": "\"searching\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4113,
+      "offset": 4513,
       "length": 10,
       "value": "\"updating\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4143,
+      "offset": 4543,
       "length": 9,
       "value": "\"success\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4179,
+      "offset": 4579,
       "length": 17,
       "value": "\"device_mismatch\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4225,
+      "offset": 4625,
       "length": 20,
       "value": "\"device_read_failed\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4275,
+      "offset": 4675,
       "length": 21,
       "value": "\"waiting_on_packages\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4329,
+      "offset": 4729,
       "length": 25,
       "value": "\"fetch_package_timed_out\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4381,
+      "offset": 4781,
       "length": 17,
       "value": "\"connection_lost\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4432,
+      "offset": 4832,
       "length": 24,
       "value": "\"personalisation_failed\""
     },
     {
       "filePath": "\/Users\/digiseq-fadil-aweys\/Development\/digiseq\/manage-mii-sdks\/manage-mii-ios-sdk\/ManageMiiSDKFramework\/ManageMiiSDKFramework\/services\/personalisation\/PersonalisationModels.swift",
       "kind": "StringLiteral",
-      "offset": 4487,
+      "offset": 4887,
       "length": 22,
       "value": "\"response_not_allowed\""
     },

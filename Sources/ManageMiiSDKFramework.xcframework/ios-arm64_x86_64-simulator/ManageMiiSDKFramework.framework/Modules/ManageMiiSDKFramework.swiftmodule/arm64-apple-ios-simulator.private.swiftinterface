@@ -391,6 +391,12 @@ public enum EncryptionError : Swift.Error {
   @objc deinit
 }
 public struct APDU : Swift.Codable {
+  public var apdu: Swift.String?
+  public var allowedResponse: Swift.String?
+  public var responseId: Swift.String?
+  public var label: Swift.String?
+  public var subLabel: Swift.String?
+  public init(apdu: Swift.String? = nil, allowedResponse: Swift.String? = nil, responseId: Swift.String? = nil, label: Swift.String? = nil, subLabel: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
