@@ -781,7 +781,7 @@ public struct SupportedService : Swift.Codable {
   public func enableLostMode(asn: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
   public func disableLostMode(asn: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
   public func removeWearable(asn: Swift.String, completion: @escaping (Swift.Result<Swift.Void, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
-  public func patchWearable(asn: Swift.String, userSpecifiedWearableName: Swift.String?, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Wearable, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
+  public func changeWearableName(asn: Swift.String, userSpecifiedWearableName: Swift.String?, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Wearable, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
   public func getModelsBySerialNumber(serialNumber: Swift.String, completion: @escaping (Swift.Result<[ManageMiiSDKFramework.DiscoveryServiceDevice], ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
   public func addWearableToAccount(serialNumber: Swift.String, modelId: Swift.String, variantId: Swift.String?, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Wearable, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)
   public func getService(asn: Swift.String, token: Swift.String, completion: @escaping (Swift.Result<ManageMiiSDKFramework.Service, ManageMiiSDKFramework.ManageMiiSDKError>) -> Swift.Void)

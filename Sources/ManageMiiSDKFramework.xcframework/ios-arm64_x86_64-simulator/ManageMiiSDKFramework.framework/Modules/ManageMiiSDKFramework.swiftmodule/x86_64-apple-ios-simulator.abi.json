@@ -38542,8 +38542,8 @@
           },
           {
             "kind": "Function",
-            "name": "patchWearable",
-            "printedName": "patchWearable(asn:userSpecifiedWearableName:completion:)",
+            "name": "changeWearableName",
+            "printedName": "changeWearableName(asn:userSpecifiedWearableName:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -38604,8 +38604,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21ManageMiiSDKFramework16WearablesServiceC13patchWearable3asn013userSpecifiedG4Name10completionySS_SSSgys6ResultOyAA0G0VAA0aB8SDKErrorVGctF",
-            "mangledName": "$s21ManageMiiSDKFramework16WearablesServiceC13patchWearable3asn013userSpecifiedG4Name10completionySS_SSSgys6ResultOyAA0G0VAA0aB8SDKErrorVGctF",
+            "usr": "s:21ManageMiiSDKFramework16WearablesServiceC18changeWearableName3asn013userSpecifiedgH010completionySS_SSSgys6ResultOyAA0G0VAA0aB8SDKErrorVGctF",
+            "mangledName": "$s21ManageMiiSDKFramework16WearablesServiceC18changeWearableName3asn013userSpecifiedgH010completionySS_SSSgys6ResultOyAA0G0VAA0aB8SDKErrorVGctF",
             "moduleName": "ManageMiiSDKFramework",
             "declAttributes": [
               "AccessControl",
