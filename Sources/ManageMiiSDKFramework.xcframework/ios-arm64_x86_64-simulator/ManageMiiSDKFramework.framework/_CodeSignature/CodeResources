@@ -10,7 +10,7 @@
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		eSDFXuk6XIEsAVsm4adJkcrR5a0=
+		Ky/XunA7euJyuT6epHx5yDrIqTk=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ih0lnLuf9+KE5yUzOUecsnq32/E=
+		eaSqf5mEi5h0juTU5ng7LHaUDBE=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		eSDFXuk6XIEsAVsm4adJkcrR5a0=
+		Ky/XunA7euJyuT6epHx5yDrIqTk=
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kq5UcQSllbXzuUHS5kuIFJbAAbE=
+		GHbM1dKv5u65nDPzrmMy+MwxmOA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -55,7 +55,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zL/86Fs2bc3sHRsvRrvDxSywCMNxL6ZxqvhGnAXS8x4=
+			T20f4GuFLkcUHMpgxArdrx03Ss9zXM78RA2I5DsDiqg=
 			</data>
 		</dict>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -83,14 +83,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kDRhh+TiVM8kxdVdOXE/pdXHp430dW55Vja5BLXRC5E=
+			Yoklxr7qoOIs4rXmxxl32nLKgAwSDhOXr9s2EGusv68=
 			</data>
 		</dict>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zL/86Fs2bc3sHRsvRrvDxSywCMNxL6ZxqvhGnAXS8x4=
+			T20f4GuFLkcUHMpgxArdrx03Ss9zXM78RA2I5DsDiqg=
 			</data>
 		</dict>
 		<key>Modules/ManageMiiSDKFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -118,7 +118,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			enzFBwJaOmitRpxjlwqA84s1HhN1n2N0NgOGQ2uH6aE=
+			iBl35PwA+RUjCGa5EYU1ff0TynXZzBDTnF7vtHEqhYY=
 			</data>
 		</dict>
 	</dict>
