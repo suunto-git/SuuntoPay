@@ -665,6 +665,7 @@ public struct Service : Swift.Codable {
   public var type: Swift.String?
   public var subType: Swift.String?
   public var token: Swift.String?
+  public var aid: Swift.String?
   public var tokenExpiry: Swift.String?
   public var taskType: ManageMiiSDKFramework.TaskType?
   public var provider: Swift.String?
